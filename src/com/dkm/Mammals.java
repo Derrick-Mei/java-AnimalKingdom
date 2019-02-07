@@ -1,12 +1,12 @@
 package com.dkm;
 
-public class Mammals extends Animals
+class Mammals extends Animals
 {
 //    String move = "walk";
 //    String breath = "lungs";
 //    String reproduce = "live births";
 
-    public Mammals(String name, int yearDiscovered) {
+    Mammals(String name, int yearDiscovered) {
         super(name, yearDiscovered, "walk", "lungs", "live births");
     }
 

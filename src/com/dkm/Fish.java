@@ -1,8 +1,8 @@
 package com.dkm;
 
-public class Fish extends Animals
+class Fish extends Animals
 {
-    public Fish(String name, int yearDiscovered) {
+    Fish(String name, int yearDiscovered) {
         super(name, yearDiscovered, "swim", "gills", "eggs");
     }
 

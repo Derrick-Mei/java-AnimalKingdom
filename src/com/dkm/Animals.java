@@ -1,19 +1,19 @@
 package com.dkm;
 
-public abstract class Animals
+abstract class Animals
 {
-    static int maxId = 0;
-    int id;
+    private static int maxId = 0;
+    final int id;
 
     String consume = "Chew";
-    String name;
-    int yearDiscovered;
+    final String name;
+    final int yearDiscovered;
 
-    String move;
-    String breath;
-    String reproduce;
+    final String move;
+    final String breath;
+    final String reproduce;
 
-    public Animals(String name, int yearDiscovered, String move, String breath, String reproduce) {
+    Animals(String name, int yearDiscovered, String move, String breath, String reproduce) {
         maxId++;
         id = maxId;
 
@@ -40,23 +40,23 @@ public abstract class Animals
         return id;
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
-    public int getYearDiscovered() {
+    int getYearDiscovered() {
         return yearDiscovered;
     }
 
-    public String getMove() {
+    String getMove() {
         return move;
     }
 
-    public String getBreath() {
+    String getBreath() {
         return breath;
     }
 
-    public String getReproduce() {
+    String getReproduce() {
         return reproduce;
     }
 }

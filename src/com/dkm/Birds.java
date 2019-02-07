@@ -1,8 +1,8 @@
 package com.dkm;
 
-public class Birds extends Animals
+class Birds extends Animals
 {
-    public Birds(String name, int yearDiscovered) {
+    Birds(String name, int yearDiscovered) {
         super(name, yearDiscovered, "fly", "lungs", "eggs");
     }
 

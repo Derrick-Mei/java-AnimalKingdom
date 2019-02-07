@@ -1,14 +1,13 @@
 package com.dkm;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
+import java.util.Comparator;
 
-public class Main {
+class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        // write your code here
         Mammals Panda = new Mammals("Panda", 1869);
         Mammals Zebra = new Mammals("Zebra", 1778);
         Mammals Koala = new Mammals("Koala", 1816);
@@ -39,12 +38,12 @@ public class Main {
 //        System.out.println(animalKingdomList);
 
         System.out.println("\n*** Descending order by year named ***");
-        animalKingdomList.sort((o1, o2) -> o1.getYearDiscovered() - o2.getYearDiscovered());
+        animalKingdomList.sort(Comparator.comparingInt(Animals::getYearDiscovered));
         animalKingdomList.forEach(o -> System.out.println(o.getName() + " | " + o.getYearDiscovered()));
 
         System.out.println("\n*** List Animals Alphabetically");
         animalKingdomList.sort((o1, o2) -> o1.getName().compareToIgnoreCase(o2.getName()));
-        animalKingdomList.forEach(o -> System.out.println((animalKingdomList.indexOf(o)+1) + ". " + o.getName()));
+        animalKingdomList.forEach(o -> System.out.println((animalKingdomList.indexOf(o) + 1) + ". " + o.getName()));
 
         System.out.println("\n *** List Animals by how the move ***");
         animalKingdomList.sort((o1, o2) -> o1.getMove().compareToIgnoreCase(o2.getMove()));
@@ -59,7 +58,7 @@ public class Main {
 
         System.out.println("\n *** List Animals with Lungs && named in 1758 ***");
         animalKingdomList.forEach(o -> {
-            if ((o.getBreath().equalsIgnoreCase("lungs")) && o.getYearDiscovered()==1758) {
+            if ((o.getBreath().equalsIgnoreCase("lungs")) && o.getYearDiscovered() == 1758) {
                 System.out.println(o.getName() + " has lungs and was discovered in " + o.getYearDiscovered());
             }
         });
