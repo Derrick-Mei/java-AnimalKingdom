@@ -40,10 +40,6 @@ public abstract class Animals
         return id;
     }
 
-    public String getConsume() {
-        return consume;
-    }
-
     public String getName() {
         return name;
     }
