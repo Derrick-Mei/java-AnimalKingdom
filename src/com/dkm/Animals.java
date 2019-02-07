@@ -13,15 +13,54 @@ public abstract class Animals
     String breath;
     String reproduce;
 
+    public Animals(String name, int yearDiscovered, String move, String breath, String reproduce) {
+        maxId++;
+        id = maxId;
+
+        this.name = name;
+        this.yearDiscovered = yearDiscovered;
+        this.move = move;
+        this.breath = breath;
+        this.reproduce = reproduce;
+    }
+
+    public String getMoveString() {
+        return name + "s move by " + move +"ing";
+    }
+
+    public String getBreathString() {
+        return name + "s breath through their " + breath;
+    }
+
+    public String getReproduceString() {
+        return name + "s reproduce by " + reproduce;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getConsume() {
+        return consume;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getYearDiscovered() {
+        return yearDiscovered;
+    }
+
     public String getMove() {
-        return "This animal moves by " + move +"ing";
+        return move;
     }
 
     public String getBreath() {
-        return "This animal breaths through their " + breath;
+        return breath;
     }
 
     public String getReproduce() {
-        return "This animal reproduces by " + reproduce;
+        return reproduce;
     }
 }
